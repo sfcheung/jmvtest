@@ -1,0 +1,20 @@
+---
+name:  hatvalues
+title: Save hatvalues
+menuGroup: jmvtest
+version: '1.0.0'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+
+    - name: dv
+      title: Dependent Variable
+      type: Variable
+
+    - name: iv
+      title: Independent Variable(s)
+      type: Variables
+
+...
