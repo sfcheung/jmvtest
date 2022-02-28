@@ -1,0 +1,42 @@
+---
+name:  hatvalues
+title: Save hatvalues
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: Save hatvalues
+      type:  Preformatted
+
+    - name:  coeftable
+      title: Regression Coefficients
+      type:  Table
+      rows: 1
+      columns:
+        - name: term
+          title: ""
+          type: text
+        - name: coef
+          title: "B"
+          type: number
+        - name: se
+          title: "S.E."
+          type: number
+        - name: t
+          title: "t"
+          type: number
+        - name: p
+          title: "p-value"
+          type: number
+          format: pvalue
+
+    - name: hv
+      type: Output
+      title: Leverage
+      varTitle: Leverage
+      varDescription: Leverage
+      measureType: continuous
+      clearWith:
+        - dv
+        - iv
+...
