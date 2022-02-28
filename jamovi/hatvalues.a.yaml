@@ -17,4 +17,7 @@ options:
       title: Independent Variable(s)
       type: Variables
 
+    - name: hv
+      title: Leverage
+      type: Output
 ...

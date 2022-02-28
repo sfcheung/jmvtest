@@ -21,16 +21,21 @@ hatvaluesOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
             private$..iv <- jmvcore::OptionVariables$new(
                 "iv",
                 iv)
+            private$..hv <- jmvcore::OptionOutput$new(
+                "hv")
 
             self$.addOption(private$..dv)
             self$.addOption(private$..iv)
+            self$.addOption(private$..hv)
         }),
     active = list(
         dv = function() private$..dv$value,
-        iv = function() private$..iv$value),
+        iv = function() private$..iv$value,
+        hv = function() private$..hv$value),
     private = list(
         ..dv = NA,
-        ..iv = NA)
+        ..iv = NA,
+        ..hv = NA)
 )
 
 hatvaluesResults <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(

@@ -21,3 +21,8 @@ children:
           - type: VariablesListBox
             name: iv
             isTarget: true
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: Output
+        name: hv
