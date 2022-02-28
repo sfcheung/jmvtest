@@ -40,10 +40,12 @@ hatvaluesClass <- if (requireNamespace('jmvcore', quietly=TRUE)) R6::R6Class(
             lm_hat <- stats::hatvalues(lm_out)
             if (self$results$hv$isNotFilled()) {
                 self$results$hv$setRowNums(rownames(self$data))
+                self$results$hv$setValues(rep(0, nrow(self$data)))
                 # self$results$hv$setValues(lm_hat)
-                self$results$hv$setValues(lm_hat)
               }
-            textres <- paste0(textres, "\n", capture.output(head(lm_hat)))
+            textres <- paste0(c(textres,
+                              capture.output(head(lm_hat))),
+                              collapse = "\n")
             self$results$text$setContent(textres)
           }
     )
